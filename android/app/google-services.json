@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "287852845786",
+    "project_id": "westfestapp",
+    "storage_bucket": "westfestapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287852845786:android:9c4e52ca1083d5cba5a3e3",
+        "android_client_info": {
+          "package_name": "com.jeffreyforde99.westfest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW3t1YnCGaNjhx32LIRko6icGgFKU-c3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287852845786:android:895c28fb1ab1cb86a5a3e3",
+        "android_client_info": {
+          "package_name": "com.jeffreyforde99.westfestupdate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW3t1YnCGaNjhx32LIRko6icGgFKU-c3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
