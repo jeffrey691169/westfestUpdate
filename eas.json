@@ -9,21 +9,21 @@
       "env": {
         "GOOGLE_SERVICE_INFO_PLIST": "${GOOGLE_SERVICE_INFO_PLIST}"
       },
-      "prebuildCommand": "echo \"$GOOGLE_SERVICE_INFO_PLIST\" | base64 --decode > ios/GoogleService-Info.plist"
+      "prebuildCommand": "node decodeGoogleServiceInfo.js"
     },
     "preview": {
       "distribution": "internal",
       "env": {
         "GOOGLE_SERVICE_INFO_PLIST": "${GOOGLE_SERVICE_INFO_PLIST}"
       },
-      "prebuildCommand": "echo \"$GOOGLE_SERVICE_INFO_PLIST\" | base64 --decode > ios/GoogleService-Info.plist"
+      "prebuildCommand": "node decodeGoogleServiceInfo.js"
     },
     "production": {
       "distribution": "store",
       "env": {
         "GOOGLE_SERVICE_INFO_PLIST": "${GOOGLE_SERVICE_INFO_PLIST}"
       },
-      "prebuildCommand": "echo \"$GOOGLE_SERVICE_INFO_PLIST\" | base64 --decode > ios/GoogleService-Info.plist"
+      "prebuildCommand": "node decodeGoogleServiceInfo.js"
     }
   }
 }
