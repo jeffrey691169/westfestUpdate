@@ -3,6 +3,8 @@ const path = require('path');
 
 // Ensure the environment variable is set
 const googleServiceInfoBase64 = process.env.GOOGLE_SERVICE_INFO_PLIST;
+console.log(process.env.GOOGLE_SERVICE_INFO_PLIST); // This should print the base64 string
+
 
 if (!googleServiceInfoBase64) {
   console.error('GOOGLE_SERVICE_INFO_PLIST is not set.');
