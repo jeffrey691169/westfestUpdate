@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Check if the environment variable is set
+// Ensure the environment variable is set
 const googleServiceInfoBase64 = process.env.GOOGLE_SERVICE_INFO_PLIST;
 
 if (!googleServiceInfoBase64) {
@@ -12,10 +12,15 @@ if (!googleServiceInfoBase64) {
 // Decode the base64 string to binary data
 const decodedData = Buffer.from(googleServiceInfoBase64, 'base64');
 
-// Define the file path where GoogleService-Info.plist should be written
-const filePath = path.join(__dirname, 'ios', 'GoogleService-Info.plist');
+// Automatically handle platform-based logic using the EAS Build environment
+const platform = process.env.PLATFORM || 'ios'; // Default to 'ios' if not set
 
-// Write the decoded content to the file
+let filePath = path.join(__dirname, 'ios', 'GoogleService-Info.plist');
+if (platform === 'android') {
+  filePath = path.join(__dirname, 'android', 'google-services.json');
+}
+
+// Write the decoded content to the correct file based on platform
 fs.writeFileSync(filePath, decodedData);
 
-console.log('GoogleService-Info.plist has been written to ios/ directory.');
+console.log(`${platform === 'ios' ? 'GoogleService-Info.plist' : 'google-services.json'} has been written to ${platform}/ directory.`);
