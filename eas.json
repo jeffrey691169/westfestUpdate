@@ -8,19 +8,22 @@
       "distribution": "internal",
       "env": {
         "GOOGLE_SERVICE_INFO_PLIST": "${GOOGLE_SERVICE_INFO_PLIST}"
-      }
+      },
+      "prebuildCommand": "echo \"$GOOGLE_SERVICE_INFO_PLIST\" | base64 --decode > ios/GoogleService-Info.plist"
     },
     "preview": {
       "distribution": "internal",
       "env": {
         "GOOGLE_SERVICE_INFO_PLIST": "${GOOGLE_SERVICE_INFO_PLIST}"
-      }
+      },
+      "prebuildCommand": "echo \"$GOOGLE_SERVICE_INFO_PLIST\" | base64 --decode > ios/GoogleService-Info.plist"
     },
     "production": {
       "distribution": "store",
       "env": {
         "GOOGLE_SERVICE_INFO_PLIST": "${GOOGLE_SERVICE_INFO_PLIST}"
-      }
+      },
+      "prebuildCommand": "echo \"$GOOGLE_SERVICE_INFO_PLIST\" | base64 --decode > ios/GoogleService-Info.plist"
     }
   }
 }
